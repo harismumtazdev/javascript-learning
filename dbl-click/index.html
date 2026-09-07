@@ -6,6 +6,24 @@
     <title>Dbl Click</title>
 </head>
 <body>
+    <span id="abc">99</span>
+    <button id="check-is">Click me</button>
     
 </body>
+<script>
+    const abc = document.getElementById("abc");
+    let checkis= false;
+    document.getElementById("check-is").addEventListener("dblclick", function() {
+
+        if(checkis==false){
+            checkis=true;
+            console.log("100");
+            abc.innerHTML="100";
+        }else if (checkis==true){
+            checkis=false;
+            console.log("99");
+            abc.innerHTML="99";
+        }
+    });
+</script>
 </html>
