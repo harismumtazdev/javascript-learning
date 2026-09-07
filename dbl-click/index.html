@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dbl Click</title>
+    <style>
+        span{
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <span id="abc">99❤️</span>
+    <span id="ab">0👎</span>
+
     
 </body>
+<script>
+    let abc = document.getElementById("abc");
+    let ab = document.getElementById("ab");
+    let checkis= false;
+    document.getElementById("abc").addEventListener("dblclick", function() {
+
+        if(checkis==false){
+            checkis=true;
+            abc.innerHTML="100❤️";
+
+
+        }else if (checkis==true){
+            checkis=false;
+            abc.innerHTML="0👎99❤️";
+
+        }
+    });
+    document.getElementById("ab").addEventListener("dblclick", function() {
+
+        if(checkis==false){
+            checkis=true;
+            ab.innerHTML="1👎";
+
+        }else if (checkis==true){
+            checkis=false;
+            ab.innerHTML="0👎";
+
+        }
+    });
+</script>
 </html>
