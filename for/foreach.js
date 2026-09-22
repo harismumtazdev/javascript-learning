@@ -1,12 +1,12 @@
 const fruits = ["apple", "banana", "orange"];
 
 // Loop through each value in the array
-fruits.forEach(function(fruit) {
-  console.log(fruit);
+fruits.forEach(function(fruits) {
+  console.log(fruits);
 });
-const fruit = ["apple", "banana", "orange"];
+const fruit = ["apple", "banana"];
 
 // Loop through each value in the array
-fruits.forEach(function(fruitss) {
-  console.log(fruitss);
-});
+for(let i in fruit ){
+  console.log(fruit);
+};
