@@ -1,12 +1,22 @@
-const fruits = ["apple", "banana", "orange"];
 
-// Loop through each value in the array
-fruits.forEach(function(fruits) {
-  console.log(fruits);
-});
-const fruit = ["apple", "banana"];
+let fruits=[100,26895,"ali",9.0,true]
+console.log(fruits);
+fruits.push("apple")
+console.log(fruits);
+fruits.pop()
+console.log(fruits);
+fruits.shift()
+console.log(fruits);
+fruits.unshift(110)
+console.log(fruits);
+fruits[4]="sultan"
+console.log(fruits);
+for( let )
 
-// Loop through each value in the array
-for(let i in fruit ){
-  console.log(fruit);
-};
+
+
+
+
+
+
+
