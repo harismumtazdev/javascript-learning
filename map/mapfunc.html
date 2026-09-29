@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="second-section">
+        <h1>
+            top shoes
+        </h1>
+        <div class="top-shoes" id="map">
+
+        </div>
+
+    </section>
+
+</body>
+<script>
+    let arrobj = [{
+        id: 1,
+        name: "ali",
+        src: "images/shoes1.png",
+    }, {
+        id: 1,
+        name: "ali",
+        src: "images/shoes1.png",
+    }, {
+        id: 1,
+        name: "ali",
+        src: "images/shoes1.png",
+    }, {
+        id: 1,
+        name: "ali",
+        src: "images/shoes1.png",
+    }, {
+        id: 1,
+        name: "ali",
+        src: "images/shoes1.png",
+    }, {
+        id: 1,
+        name: "ali",
+        src: "images/shoes1.png",
+    }
+]
+    const div = document.getElementById("map");
+    function addCards() {
+        const newarray = arrobj.map((element) => {
+            return `
+            <div class="card">
+                <img src="${element.src}" alt="">
+                <h1>${element.name}</h1>
+                </div>
+            `
+
+        })
+        div.innerHTML = newarray.join("");
+
+
+    }
+    addCards();
+</script>
+
+</html>
