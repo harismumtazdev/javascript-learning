@@ -1,0 +1,32 @@
+.second-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top-shoes{
+    max-width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 200px;
+}
+.card{
+    height: 200px;
+    width: 180px;
+     background: #c0bdbd;
+     padding: 5px 0;
+     transition: 1s ease-in-out;
+}
+.card:hover{
+    box-shadow: 1px 1px 20px 2px rgba(37, 35, 35, 0.55);
+}
+.card img{
+    height: 90%;
+    width: 100%;
+}
+h3{
+    text-align: center;
+}
