@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+    <section class="main-section">
+
+
+        <div class="all-cards" id="map">
+
+
+
+
+
+
+
+        </div>
+
+        </div>
+
+
+    </section>
+
+</body>
+<script>
+    let allinfo = [
+        {
+            id: 1,
+            src: './images/Dr. Junaid Mahmood.webp',
+            name: 'Dr. Junaid Mahmood',
+            head: 'Head of Department (English) & Assistant Professor',
+            department: 'English',
+        },
+        {
+            id: 1,
+            src: './images/Dr. Mubashar Nawaz.webp',
+            name: 'Dr. Mubashar Nawaz',
+            head: 'Assistant Professor & Incharge Library',
+            department: 'English',
+        },
+        {
+            id: 1,
+            src: './images/Noman.webp',
+            name: 'Mr. Noman ur Rehman',
+            head: 'Lecturer',
+            department: 'English',
+        },
+        {
+            id: 1,
+            src: './images/Mr. Omer Ahsan.webp',
+            name: 'Mr. Omer Ahsan',
+            head: 'Lecturer',
+            department: 'English',
+        },
+        {
+            id: 1,
+            src: './images/Mr. Steve Austin.webp',
+            name: 'Mr. Steve Austin',
+            head: 'Lecturer',
+            department: 'English',
+        },
+       
+    ]
+    const div = document.getElementById("map")
+
+    function addCards() {
+
+        const newarray = allinfo.map((element) => {
+            return `
+         <div class="cards" >
+                        <div class="img">
+                <img src="${element.src}" alt="" class="card-img">
+                </div>
+                <div class="content">
+                    <h4>${element.name}</h4>
+                    <p>${element.head}</p>
+                    <span>${element.department}</span>
+
+                </div>
+                    </div>
+        `
+
+        })
+          
+        div.innerHTML = newarray.join("")
+
+
+    }
+    addCards()
+
+
+</script>
+
+
+</html>

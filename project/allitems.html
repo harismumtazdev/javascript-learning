@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <section class="all-section">
+
+        <h1>All Items</h1>
+
+        <div class="all-shoes" id="all-map">
+        </div>
+
+        <button id="show-more">Show More</button>
+
+    </section>
+
+
+    <script>
+        
+
+        let allobj = [
+            {
+                id: 1,
+                src: './images/shoes1.png',
+                head:'Elegant Black Crystal Dial Women’s',
+                price:'Rs1990',
+            },
+            {
+                id: 2,
+                src: './images/shoes2.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            },
+            {
+                id: 3,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            },
+            {
+                id: 4,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            },
+            {
+                id: 5,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s',
+                price:'Rs1990',
+            },
+            {
+                id: 6,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            },
+            {
+                id: 7,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s',
+                price:'Rs1990',
+            },
+            {
+                id: 8,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            },
+            {
+                id: 9,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s',
+                price:'Rs1990',
+            },
+            {
+                id: 10,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s',
+                price:'Rs1990',
+            },
+            {
+                id: 11,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s',
+                price:'Rs1990',
+            },
+            {
+                id: 12,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s',
+                price:'Rs1990',
+            },
+            {
+                id: 13,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            },
+            {
+                id: 14,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            },
+            {
+                id: 15,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            },
+            {
+                id: 16,
+                src: './images/shoes3.png',
+                head:'Elegant Black Crystal Dial Women’s ',
+                price:'Rs1990',
+            }
+        ];
+
+
+        const div = document.getElementById("all-map");
+        const showMore = document.getElementById("show-more");
+
+        let showItems = 10;
+
+
+        function allCards() {
+
+            const newallarray = allobj.slice(0,showItems).map((element) => {
+
+                return `
+                    <div class="all-card">
+                        <img src="${element.src}" alt="" class="all-shoes-img">
+                        <h1>${element.head}</h1>
+                        <p>${element.price}</p>
+                    </div>
+                `;
+
+            });
+
+            div.innerHTML = newallarray.join("");
+
+
+            if (showItems >= allobj.length) {
+                showMore.style.display = "none";
+            }
+
+        }
+
+
+        allCards();
+
+
+        showMore.addEventListener("click", function () {
+
+            showItems += 10;
+
+            allCards();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
