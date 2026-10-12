@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Fetch API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            max-width: 300px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>GitHub Profile Data</h2>
+    
+    <div id="profile-container">
+        <p>Loading data...</p>
+    </div>
+
+    <script>
+        async function fetchGitHubUser(username) {
+            const url = https://api.github.com/users/${username};
+            try {
+                const response = await fetch(url);                
+                const data = await response.json();
+                console.log(data);
+                
+                const profileHtml = `
+                    <div class="card">
+                        <img src="${data.avatar_url}" alt="${data.login}">
+                        <h3>${data.name || data.login}</h3>
+                        <p><strong>Bio:</strong> ${data.bio}</p>
+                        <p><strong>Country:</strong> ${data.location}</p>
+                        <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+
+                        <a href="${data.html_url}" target="_blank">View Profile</a>
+                    </div>
+                `;
+                document.getElementById('profile-container').innerHTML = profileHtml;
+                
+                return data;
+            }
+             catch (error) {
+                document.getElementById('profile-container').innerHTML = <p style="color: red;">Error: ${error.message}</p>;
+            }
+        }
+
+        fetchGitHubUser('harismumtazdev');
+     
+    </script>
+</body>
+</html>

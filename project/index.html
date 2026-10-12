@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e75161c55d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="clr">
+    <header class="header">
+        <div class="logo">
+            <img src="images/nike.png" class="nik" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="phone">
+            ●●●●●●●●
+        </div>
+    </header>
+    <main>
+        <section class="circle">
+
+            <div class="img">
+                <img src="images/shoes1.png" alt="Pic" class="img1">
+
+                <img src="images/shoes7.png" alt="Pic" class="img2">
+
+
+
+
+            </div>
+            <div class="circle1 "></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="centr">
+                <div class="text">
+                    <span>Nike Inc.</span>
+                    <h1>Air Max 207</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, illo! Lorem ipsum dolor sit amet
+                        Lorem ipsum dolor sit
+                        consectetur. Lorem ipsum dolor sit amet consectetur.</p>
+
+                </div>
+                <div class="btns">
+                    <a href="#" class="btn1">Buy AirMax</a>
+                    <a href="#" class="btn2">Shop</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+        <section class="second-section">
+            <h1>
+                Top Shoes
+            </h1>
+           
+                <div class="top-shoes" id="map"></div>
+
+
+
+            </div>
+            <a href="./allitems.html">See all products</a>
+
+        </section>
+        <section class="third-section">
+                 <div><h2>Sales</h2></div>
+                 <div class="shoes-slider">
+                     <div class="slider-card"></div>
+                     <div class="img-card"></div>
+                 </div>
+                 <div>
+                    <button>Prev</button>
+                    <button>Next</button>
+                 </div>
+        </section>
+        
+    </main>
+
+</body>
+<script>
+
+
+    let arrobj = [
+        {
+            id: 1,
+            name: 'Nike Shoes',
+            src: './images/shoes1.png'
+        },
+        {
+            id: 1,
+            name: 'Nike Shoes',
+            src: './images/shoes2.png'
+        }
+        ,
+
+        {
+            id: 1,
+            name: 'Nike Shoes',
+            src: './images/shoes3.png'
+        },
+
+        ,
+
+        {
+            id: 1,
+            name: 'Nike Shoes',
+            src: './images/shoes3.png'
+        },
+
+        ,
+
+        {
+            id: 1,
+            name: 'Nike Shoes',
+            src: './images/shoes3.png'
+        },
+
+        ,
+
+        {
+            id: 1,
+            name: 'Nike Shoes',
+            src: './images/shoes3.png'
+        },
+
+
+    ]
+
+    const div = document.getElementById("map")
+
+    function addCards() {
+
+        const newarray = arrobj.map((element) => {
+            return `
+         <div class="card" >
+                        <img src="${element.src}" alt="" class="top-shoes-img">
+                        <h3>${element.name}</h3>
+                    </div>
+        `
+
+        })
+        div.innerHTML = newarray.join("")
+        console.log(arrobj);
+
+
+    }
+    addCards()
+
+</script>
+
+</html>
