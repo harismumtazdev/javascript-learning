@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <p>
+            Loading....
+        </p>
+
+    </div>
+   
+
+
+
+</body>
+<script>
+    async function fetchGitHubUser(username) {
+
+        const url = `https://api.weatherapi.com/v1/current.json?key=c5255f75e9304fb69c8105939261210&q=Jhelum`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            console.log(data);
+
+            const profileHtml = `
+                   <section class="main">
+                        <div class="left">
+                        <img src="${data.current.condition.icon}" alt="${data.login}">
+
+                           <h4>${data.location.name}</h4>
+                            <p><strong>Last Updated:</strong>${data.current.last_updated}</p>
+                            <p><strong>Temp:</strong>${data.current.temp_c}</p>
+                            <p><strong>Lat:</strong>${data.location.lat}</p>
+                            <p><strong>Lon:</strong>${data.location.lon}</p>
+
+                        </div>
+                        <div class="right">
+                            <div class="top">
+                                <h2>Weather Details</h2>
+                                <div class="content">
+                                   <p><strong>Humidity:</strong>${data.current.humidity}</p>
+                                   <p><strong>Wind:</strong>${data.current.wind_kph}</p>
+
+                                   <p><strong>Pressure:</strong>${data.current.pressure_mb}</p>
+
+
+                                    <p><strong>Region:</strong>${data.location.region}</p>
+                                    <p><strong>Local Time:</strong>${data.location.localtime}</p>
+
+                                    <p><strong>Location:</strong>${data.location.tz_id}</p>
+
+                                    <p><strong>Bio:</strong>${data.location.country}</p>
+                                </div>
+                        </div>
+
+                
+
+                            <div class="bottom">
+                            <h2>Air Quality</h2>
+                            <p>${data.current.condition.text}</p>
+                            </div>
+                        </div>
+                    </section>
+                `;
+
+            document.getElementById("container").innerHTML = profileHtml;
+
+            return data;
+        }
+
+        catch (error) {
+            document.getElementById("container").innerHTML =
+                `<p style="color: red;">Error: ${error.message}</p>`;
+        }
+    }
+
+   fetchGitHubUser("Jhelum");;
+
+</script>
+
+</html>
