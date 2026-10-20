@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-color: red;
+    width: 100vw;
+    height: 52vw;
+    display: flex;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+.one{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.one{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.two{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.three{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.four{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.five{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.six{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.seven{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.eight{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.six{
+    background-image: url(images/cup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    background-color: blueviolet;
+}
+.third{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    background-color: aqua;
+}
